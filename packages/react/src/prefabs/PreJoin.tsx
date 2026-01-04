@@ -129,9 +129,9 @@ export function usePreviewDevice<T extends LocalVideoTrack | LocalAudioTrack>(
       const track =
         kind === 'videoinput'
           ? await createLocalVideoTrack({
-              deviceId,
-              resolution: VideoPresets.h720.resolution,
-            })
+            deviceId,
+            resolution: VideoPresets.h720.resolution,
+          })
           : await createLocalAudioTrack({ deviceId });
 
       const newDeviceId = await track.getDeviceId(false);
@@ -223,10 +223,10 @@ export function PreJoin({
   onSubmit,
   onError,
   debug,
-  joinLabel = 'Join Room',
-  micLabel = 'Microphone',
-  camLabel = 'Camera',
-  userLabel = 'Username',
+  joinLabel = '加入房间',
+  micLabel = '麦克风',
+  camLabel = '摄像头',
+  userLabel = '用户名',
   persistUserChoices = true,
   videoProcessor,
   ...htmlProps

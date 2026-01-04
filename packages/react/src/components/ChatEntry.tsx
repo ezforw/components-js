@@ -63,7 +63,7 @@ export const ChatEntry: (
 
             {(!hideTimestamp || hasBeenEdited) && (
               <span className="lk-timestamp">
-                {hasBeenEdited && 'edited '}
+                {hasBeenEdited && '已编辑 '}
                 {time.toLocaleTimeString(locale, { timeStyle: 'short' })}
               </span>
             )}

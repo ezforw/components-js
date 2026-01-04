@@ -24,19 +24,19 @@ export function ConnectionStateToast(props: ConnectionStateToastProps) {
       case ConnectionState.Reconnecting:
         setNotification(
           <>
-            <SpinnerIcon className="lk-spinner" /> Reconnecting
+            <SpinnerIcon className="lk-spinner" /> 重新连接中
           </>,
         );
         break;
       case ConnectionState.Connecting:
         setNotification(
           <>
-            <SpinnerIcon className="lk-spinner" /> Connecting
+            <SpinnerIcon className="lk-spinner" /> 连接中
           </>,
         );
         break;
       case ConnectionState.Disconnected:
-        setNotification(<>Disconnected</>);
+        setNotification(<>已断开</>);
         break;
       default:
         setNotification(undefined);

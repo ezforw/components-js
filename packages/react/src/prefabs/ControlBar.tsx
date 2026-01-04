@@ -160,7 +160,7 @@ export function ControlBar({
             onChange={microphoneOnChange}
             onDeviceError={(error) => onDeviceError?.({ source: Track.Source.Microphone, error })}
           >
-            {showText && 'Microphone'}
+            {showText && '麦克风'}
           </TrackToggle>
           <div className="lk-button-group-menu">
             <MediaDeviceMenu
@@ -180,7 +180,7 @@ export function ControlBar({
             onChange={cameraOnChange}
             onDeviceError={(error) => onDeviceError?.({ source: Track.Source.Camera, error })}
           >
-            {showText && 'Camera'}
+            {showText && '摄像头'}
           </TrackToggle>
           <div className="lk-button-group-menu">
             <MediaDeviceMenu
@@ -200,25 +200,25 @@ export function ControlBar({
           onChange={onScreenShareChange}
           onDeviceError={(error) => onDeviceError?.({ source: Track.Source.ScreenShare, error })}
         >
-          {showText && (isScreenShareEnabled ? 'Stop screen share' : 'Share screen')}
+          {showText && (isScreenShareEnabled ? '停止共享' : '共享屏幕')}
         </TrackToggle>
       )}
       {visibleControls.chat && (
         <ChatToggle>
           {showIcon && <ChatIcon />}
-          {showText && 'Chat'}
+          {showText && '聊天'}
         </ChatToggle>
       )}
       {visibleControls.settings && (
         <SettingsMenuToggle>
           {showIcon && <GearIcon />}
-          {showText && 'Settings'}
+          {showText && '设置'}
         </SettingsMenuToggle>
       )}
       {visibleControls.leave && (
         <DisconnectButton>
           {showIcon && <LeaveIcon />}
-          {showText && 'Leave'}
+          {showText && '离开'}
         </DisconnectButton>
       )}
       <StartMediaButton />
